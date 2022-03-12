@@ -27,6 +27,10 @@ html, body {
 	margin: 0; padding: 0;
 }
 
+body {
+	height: auto;
+}
+
 section {
 	padding: 80px 0;
 }
@@ -84,7 +88,7 @@ nav.navbar img {
 }
 
 #Header .container {
-	padding: 150px 0;
+	padding: 180px 0;
 }
 
 #Header .container h1,
