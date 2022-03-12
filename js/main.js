@@ -23,5 +23,9 @@ $(document).ready(function () {
 
 	};
 
+	var skr = skrollr.init();
+	var wow = new WOW();
+	wow.init();
+
 	$WIN.scroll(toggleNavbar);
 });
