@@ -55,7 +55,7 @@ $(document).ready(function () {
 		}, 4000);
 	}
 
-	var skr = skrollr.init();
+	var skr = skrollr.init({forceHeight: false});
 	var wow = new WOW();
 	wow.init();
 
