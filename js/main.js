@@ -48,11 +48,9 @@ $(document).ready(function () {
 			// onBlock: () => $('body').css('overflow', 'hidden')
 		});
 
-		// setTimeout(function () {
-		// 	$.unblockUI({
-		// 		onUnblock: () => $('body').css('overflow', '')
-		// 	});
-		// }, 4000);
+		setTimeout(function () {
+			$.unblockUI();
+		}, 4000);
 	}
 
 	var skr = skrollr.init({forceHeight: false});
