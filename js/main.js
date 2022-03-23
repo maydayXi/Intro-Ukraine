@@ -58,5 +58,5 @@ $(document).ready(function () {
 	wow.init();
 
 	$WIN.scroll(toggleNavbar);
-	$WIN.on('load', preload);
+	// $WIN.on('load', preload);
 });
