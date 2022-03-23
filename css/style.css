@@ -430,4 +430,8 @@ footer .subscript a:hover i {
 	#Culture .row.wine {
 		flex-flow: column-reverse;
 	}
+
+	#Culture .row .img {
+		padding: 10rem 0
+	}
 }
