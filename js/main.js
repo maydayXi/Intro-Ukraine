@@ -45,14 +45,14 @@ $(document).ready(function () {
 			    padding: 0
 			},
 			message: blockTitle,
-			onBlock: () => $('body').css('overflow', 'hidden')
+			// onBlock: () => $('body').css('overflow', 'hidden')
 		});
 
-		setTimeout(function () {
-			$.unblockUI({
-				onUnblock: () => $('body').css('overflow', '')
-			});
-		}, 4000);
+		// setTimeout(function () {
+		// 	$.unblockUI({
+		// 		onUnblock: () => $('body').css('overflow', '')
+		// 	});
+		// }, 4000);
 	}
 
 	var skr = skrollr.init({forceHeight: false});
