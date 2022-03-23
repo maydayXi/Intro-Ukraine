@@ -423,3 +423,11 @@ footer .subscript a:hover i {
 		transform: translateX(0);
 	}
 }
+
+@media screen and (max-width: 767px) {
+	#Culture .row.city,
+	#Culture .row.c-c,
+	#Culture .row.wine {
+		flex-flow: column-reverse;
+	}
+}
