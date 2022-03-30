@@ -8,6 +8,10 @@ $(document).ready(function () {
 	const h 		= 'height';
 	const bdb		= 'border-bottom';
 
+	const INTRO 		= '#Intro';
+	const INTROIMG	= '#Img-Intro';
+	const MAP				= '#Map';	
+
 	// Change the navbar theme
 	var toggleNavbar = function () {
 		var top 	= $WIN.scrollTop();
@@ -55,6 +59,33 @@ $(document).ready(function () {
 		}, 4000);
 	};
 
+
+	var introTween = TweenMax.to(INTROIMG, 1, {
+		css: {opacity: 1},
+		ease: "none"
+	});
+
+	var mapTween = TweenMax.to(MAP, 1, {
+		css: {backgroundSize: "200%"},
+		ease: Power1.out
+	});
+
+	// init controller
+	var scrollController = new ScrollMagic.Controller();
+	// Intro image Effect
+	var IntroScene = new ScrollMagic.Scene({
+		triggerElement: INTRO,
+		triggerHoot: "onEnter"
+	}).setTween(introTween);
+	// Map Effect
+	var MapScene = new ScrollMagic.Scene({
+		triggerElement: MAP,
+		triggerHoot: "onEnter"
+	}).setTween(mapTween);
+
+	scrollController.addScene([IntroScene, MapScene]);
+
+	// init animation effect 
 	var wow = new WOW();
 	wow.init();
 
