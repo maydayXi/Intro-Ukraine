@@ -182,6 +182,7 @@ nav.navbar img {
 #Geography .map {
 	background-image: url("../images/ukraine-map.png");
 	background-size: 300%;
+	background-repeat: no-repeat;
 	background-position: center center;
 }
 
@@ -435,5 +436,11 @@ footer .subscript a:hover i {
 
 	#Culture .row .img {
 		padding: 10rem 0
+	}
+}
+
+@media screen and (max-width: 576px) {
+	#Map {
+		height: 400px;
 	}
 }
