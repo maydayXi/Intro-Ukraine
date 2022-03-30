@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	var $WIN 		= $(window);
+	var $WIN 			= $(window);
 	var $Navbar 	= $('#Navbar');
 	var $Navbtn		= $Navbar.find('button');
 	var $NavLink	= $('#NavbarLinks');
@@ -20,9 +20,9 @@ $(document).ready(function () {
 			$Navbar.removeClass('bg-dark')
 				.addClass('bg-transparent')
 				.css(bdb, '');
-
 	};
 
+	// Page load 
 	var preload = function () {
 		var titleStyle = 
 			'top: 50%; transform: translateY(-50%); font-size: 3rem; letter-spacing: 10px;';
@@ -45,18 +45,19 @@ $(document).ready(function () {
 			    padding: 0
 			},
 			message: blockTitle,
-			// onBlock: () => $('body').css('overflow', 'hidden')
+			onBlock: () => $('body').css('overflow', 'hidden')
 		});
 
 		setTimeout(function () {
-			$.unblockUI();
+			$.unblockUI({
+				onUnblock: () => $('body').css('overflow', '')
+			});
 		}, 4000);
-	}
+	};
 
-	// var skr = skrollr.init({forceHeight: false});
 	var wow = new WOW();
 	wow.init();
 
 	$WIN.scroll(toggleNavbar);
-	// $WIN.on('load', preload);
+	$WIN.on('load', preload);
 });
